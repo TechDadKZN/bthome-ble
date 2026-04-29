@@ -1,5 +1,25 @@
 # Changelog
 
+## v3.21.0 (2026-04-29)
+
+### Features
+
+
+- Add settings revision (0x65) ([`32e211a`](https://github.com/Bluetooth-Devices/bthome-ble/commit/32e211ab6f2ec2a0c188f39ab5cbd06ea2eac31e))
+
+
+### Chores
+
+
+- Bump codecov/codecov-action from 5 to 6 in the github-actions group ([`92f22e5`](https://github.com/Bluetooth-Devices/bthome-ble/commit/92f22e5d825fe1777967586a17938d2e9cba1f98))
+
+
+- Bump codecov/codecov-action in the github-actions group ([`92f22e5`](https://github.com/Bluetooth-Devices/bthome-ble/commit/92f22e5d825fe1777967586a17938d2e9cba1f98))
+
+
+- Pre-commit autoupdate ([`6e4b9b4`](https://github.com/Bluetooth-Devices/bthome-ble/commit/6e4b9b4efa9599a51945efc9b808e4f256eddf08))
+
+
 ## v3.20.0 (2026-02-27)
 
 ### Features
