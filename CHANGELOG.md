@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.22.1 (2026-04-30)
+
+### Bug fixes
+
+
+- Move command object from 0xe0 to 0x3b ([`a238d1f`](https://github.com/Bluetooth-Devices/bthome-ble/commit/a238d1f8604e181591a186463a5c4f2afe07094d))
+
+
 ## v3.22.0 (2026-04-30)
 
 ### Features
