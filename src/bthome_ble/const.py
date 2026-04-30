@@ -527,4 +527,8 @@ MEAS_TYPES: dict[int, MeasTypes] = {
     ),
     0x64: MeasTypes(meas_format=ExtendedSensorLibrary.LIGHT_LEVEL__NONE),
     0x65: MeasTypes(meas_format=ExtendedSensorLibrary.SETTINGS_REVISION__NONE),
+    0xE0: MeasTypes(
+        meas_format=EventDeviceKeys.COMMAND,
+        data_format="command",
+    ),
 }
