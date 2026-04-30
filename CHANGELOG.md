@@ -1,5 +1,22 @@
 # Changelog
 
+## v3.22.0 (2026-04-30)
+
+### Features
+
+
+- Add command object ([`06a9da8`](https://github.com/Bluetooth-Devices/bthome-ble/commit/06a9da893a842da8be5f1f709956bd299f98396b))
+
+
+- Add command object (0xe0) ([`06a9da8`](https://github.com/Bluetooth-Devices/bthome-ble/commit/06a9da893a842da8be5f1f709956bd299f98396b))
+
+
+### Chores
+
+
+- Auto fixes ([`06a9da8`](https://github.com/Bluetooth-Devices/bthome-ble/commit/06a9da893a842da8be5f1f709956bd299f98396b))
+
+
 ## v3.21.0 (2026-04-29)
 
 ### Features
