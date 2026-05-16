@@ -4881,7 +4881,7 @@ def test_truncated_v2_object_length_byte(payload: bytes) -> None:
     assert device._parse_payload(payload, 0.0) is False
 
 
-def test_meas_key_helper_branches():
+def test_meas_key_helper_branches() -> None:
     """Direct unit test for _meas_key() covering every branch.
 
     Locks in the silent-skip contract: any future refactor that changes the
@@ -4905,7 +4905,9 @@ def test_meas_key_helper_branches():
     assert _meas_key("not a sensor") is None
 
 
-def test_parser_skips_dedup_for_meas_format_without_key(caplog):
+def test_parser_skips_dedup_for_meas_format_without_key(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
     """Parser must not crash when a meas_format yields no dedup key.
 
     Exercises the ``if meas_key is None: continue`` branch in the dedup loop
