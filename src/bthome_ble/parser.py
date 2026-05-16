@@ -781,7 +781,7 @@ class BTHomeBluetoothDeviceData(BluetoothData):
             # Device-info objects (F0/F1/F2): update device metadata and skip
             # the sensor/event dispatch below.
             if meas["data format"] == "device_type_id":
-                self.device_type_id = parse_uint(meas["measurement data"])
+                self.device_type_id = int(parse_uint(meas["measurement data"]))
                 result = True
                 continue
             if meas["data format"] == "firmware_version_4":
@@ -797,6 +797,10 @@ class BTHomeBluetoothDeviceData(BluetoothData):
                 self.set_device_sw_version(f"{fw[2]}.{fw[1]}.{fw[0]}")
                 result = True
                 continue
+
+            # Device-info objects above already `continue`d, so meas_format
+            # cannot be None past this point.
+            assert meas_format is not None
 
             if meas_type.meas_format in dup_meas_formats:
                 # Add a postfix for advertisements with multiple measurements of the same type
