@@ -799,8 +799,9 @@ class BTHomeBluetoothDeviceData(BluetoothData):
                 continue
 
             # Device-info objects above already `continue`d, so meas_format
-            # cannot be None past this point.
-            assert meas_format is not None
+            # cannot be None past this point. Guard for type narrowing.
+            if meas_format is None:
+                continue
 
             if meas_type.meas_format in dup_meas_formats:
                 # Add a postfix for advertisements with multiple measurements of the same type
