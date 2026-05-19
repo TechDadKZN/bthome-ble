@@ -1,5 +1,40 @@
 # Changelog
 
+## v3.22.2 (2026-05-19)
+
+### Bug fixes
+
+
+- Add python 3.14 to ci test matrix ([`778f817`](https://github.com/Bluetooth-Devices/bthome-ble/commit/778f81773db62614e6c6668239c9017468373439))
+
+
+### Chores
+
+
+- Bump requests from 2.32.4 to 2.33.0 ([`27fa0d3`](https://github.com/Bluetooth-Devices/bthome-ble/commit/27fa0d347d280405d43250e1ce16bfaa89322cde))
+
+
+- Bump pygments from 2.19.1 to 2.20.0 ([`c763ec2`](https://github.com/Bluetooth-Devices/bthome-ble/commit/c763ec2469f99c5fc36b68aaaf09b4806af367d8))
+
+
+- Bump urllib3 from 2.6.3 to 2.7.0 ([`5e4b593`](https://github.com/Bluetooth-Devices/bthome-ble/commit/5e4b59322c2751fecaff26f041143c9a12ed47dd))
+
+
+- Bump cryptography from 46.0.5 to 46.0.7 ([`1063797`](https://github.com/Bluetooth-Devices/bthome-ble/commit/1063797148bb774a2b0235839942cd29cf6fdf3b))
+
+
+- Bump pytest from 9.0.2 to 9.0.3 ([`31b1ff8`](https://github.com/Bluetooth-Devices/bthome-ble/commit/31b1ff80e46900bd21efc81a32bb8c248c48126c))
+
+
+- Bump idna from 3.10 to 3.15 ([`726bc4f`](https://github.com/Bluetooth-Devices/bthome-ble/commit/726bc4f65ba8571990a8b8c9e3e8c788d0ca7222))
+
+
+- Pre-commit autoupdate ([`2986e37`](https://github.com/Bluetooth-Devices/bthome-ble/commit/2986e37493773cd1a565a9b0c45debb0960a6f14))
+
+
+- Pre-commit autoupdate ([`fa07953`](https://github.com/Bluetooth-Devices/bthome-ble/commit/fa079537500ebf45c63b444dde098b933a021c7e))
+
+
 ## v3.22.1 (2026-04-30)
 
 ### Bug fixes
