@@ -1,5 +1,25 @@
 # Changelog
 
+## v3.22.3 (2026-05-20)
+
+### Bug fixes
+
+
+- Enable ruff pt006/pt007 parametrize tuple rules ([`31fac5c`](https://github.com/Bluetooth-Devices/bthome-ble/commit/31fac5c9ce613904623138c7fbd4738a608302dd))
+
+
+### Continuous integration
+
+
+- Use uv to install managed python and poetry ([`123e71a`](https://github.com/Bluetooth-Devices/bthome-ble/commit/123e71a8c971db9c552429f693668609be079c25))
+
+
+### Chores
+
+
+- Migrate to ruff, drop black/isort/flake8/pyupgrade ([`4476709`](https://github.com/Bluetooth-Devices/bthome-ble/commit/4476709248881455f692d5e8ce0594fcea00c76b))
+
+
 ## v3.22.2 (2026-05-19)
 
 ### Bug fixes
