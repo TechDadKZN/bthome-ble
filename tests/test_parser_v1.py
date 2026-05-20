@@ -20,7 +20,7 @@ from sensor_state_data import (
     Units,
 )
 
-from bthome_ble.parser import BTHomeBluetoothDeviceData, EncryptionScheme
+from bthome_ble.parser import BTHomeBluetoothDeviceData, BTHomeVersion, EncryptionScheme
 
 ADVERTISEMENT_TIME = 1709331995.5181565
 
@@ -1355,3 +1355,12 @@ def test_bthome_multiple_uuids(caplog):
             )
         },
     )
+
+
+def test_truncated_v1_payload_missing_meas_type() -> None:
+    """Regression: V1 payload truncated to control byte only must not crash."""
+    device = BTHomeBluetoothDeviceData()
+    device.set_title("test")
+    device.bthome_version = BTHomeVersion.V1
+    # Single control byte, no measurement type byte follows.
+    assert device._parse_payload(b"\x02", 0.0) is False

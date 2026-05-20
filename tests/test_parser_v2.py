@@ -21,7 +21,7 @@ from sensor_state_data import (
 )
 
 from bthome_ble.const import ExtendedSensorDeviceClass
-from bthome_ble.parser import BTHomeBluetoothDeviceData, EncryptionScheme
+from bthome_ble.parser import BTHomeBluetoothDeviceData, BTHomeVersion, EncryptionScheme
 
 ADVERTISEMENT_TIME = 1709331995.5181565
 
@@ -4796,3 +4796,16 @@ def test_bthome_event_command_unknown_opcode(caplog):
             ),
         },
     )
+
+
+@pytest.mark.parametrize(
+    "payload",
+    [b"\x53", b"\x3b", b"\x54"],
+    ids=["string", "command", "raw"],
+)
+def test_truncated_v2_object_length_byte(payload: bytes) -> None:
+    """Regression: V2 object truncated to type byte only must not crash."""
+    device = BTHomeBluetoothDeviceData()
+    device.set_title("test")
+    device.bthome_version = BTHomeVersion.V2
+    assert device._parse_payload(payload, 0.0) is False
