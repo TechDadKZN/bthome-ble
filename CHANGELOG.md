@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.23.1 (2026-05-20)
+
+### Bug fixes
+
+
+- Parse dimmer steps as unsigned (issue #348) ([`aed7283`](https://github.com/Bluetooth-Devices/bthome-ble/commit/aed7283e7fee58ee405dbcaaf9c56c14a30f11ed))
+
+
+### Continuous integration
+
+
+- Enable ruff plc0415 to force imports at top level ([`b5fb254`](https://github.com/Bluetooth-Devices/bthome-ble/commit/b5fb254fba2dab3e8e41a3e324e9808364fdb2e7))
+
+
 ## v3.23.0 (2026-05-20)
 
 ### Features
