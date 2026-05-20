@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.23.0 (2026-05-20)
+
+### Features
+
+
+- Add reset_encryption_counter() public method ([`794416f`](https://github.com/Bluetooth-Devices/bthome-ble/commit/794416f785ff110815905bcaa668f5585cd3cdf3))
+
+
+### Continuous integration
+
+
+- Key venv cache on resolved python patch version ([`76ea6ec`](https://github.com/Bluetooth-Devices/bthome-ble/commit/76ea6ec0d870a1a383f23bd828b180fae9c1cd16))
+
+
 ## v3.22.3 (2026-05-20)
 
 ### Bug fixes
