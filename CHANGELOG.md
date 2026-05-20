@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.23.2 (2026-05-20)
+
+### Bug fixes
+
+
+- Guard parser against truncated bthome payloads (#359) ([`d6d6b59`](https://github.com/Bluetooth-Devices/bthome-ble/commit/d6d6b59e263e814d97af4dfe0cfc1f47f0940add))
+
+
 ## v3.23.1 (2026-05-20)
 
 ### Bug fixes
