@@ -4891,16 +4891,10 @@ def test_bthome_firmware_version_3_overrides_default_sw_version_encrypted():
     device.set_title("test")
     device.encryption_scheme = EncryptionScheme.BTHOME_BINDKEY
     device.bthome_version = BTHomeVersion.V2
-    # F2 00 01 06 → 6.1.0
-    assert device._parse_payload(b"\xf2\x00\x01\x06", 0.0) is True
+    # Seed the encrypted default that update() would have set.
+    device.set_device_sw_version("BTHome BLE v2 (encrypted)")
+    assert device._get_device_info(None).sw_version == "BTHome BLE v2 (encrypted)"
 
-    # Even though the parser was set up for encrypted, F2 wrote a real version.
-    # We can only confirm via the sensor library's internal state via update flow,
-    # so verify the side-effect indirectly: a follow-up advertisement keeps it.
-    data_string = b"\x40\xf2\x00\x01\x06"
-    advertisement = bytes_to_service_info(
-        data_string, local_name="TEST DEVICE", address="A4:C1:38:8D:18:B2"
-    )
-    fresh = BTHomeBluetoothDeviceData()
-    result = fresh.update(advertisement)
-    assert result.devices[None].sw_version == "6.1.0"
+    # F2 00 01 06 → 6.1.0 should overwrite the encrypted default in place.
+    assert device._parse_payload(b"\xf2\x00\x01\x06", 0.0) is True
+    assert device._get_device_info(None).sw_version == "6.1.0"
