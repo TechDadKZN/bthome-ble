@@ -4885,8 +4885,6 @@ def test_bthome_device_info_combined():
 
 def test_bthome_firmware_version_3_overrides_default_sw_version_encrypted():
     """F2 takes precedence over the 'BTHome BLE v2 (encrypted)' default too."""
-    from bthome_ble.parser import BTHomeVersion
-
     device = BTHomeBluetoothDeviceData()
     device.set_title("test")
     device.encryption_scheme = EncryptionScheme.BTHOME_BINDKEY
