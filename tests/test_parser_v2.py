@@ -4811,7 +4811,7 @@ def test_truncated_v2_object_length_byte(payload: bytes) -> None:
     assert device._parse_payload(payload, 0.0) is False
 
 
-def test_bthome_device_type_id():
+def test_bthome_device_type_id() -> None:
     """Object 0xF0 stores a manufacturer device type id (uint16 LE)."""
     # adv_info + F0 0100 (device_type_id = 1)
     data_string = b"\x40\xf0\x01\x00"
@@ -4825,7 +4825,7 @@ def test_bthome_device_type_id():
     assert device.device_type_id == 1
 
 
-def test_bthome_firmware_version_4_bytes():
+def test_bthome_firmware_version_4_bytes() -> None:
     """Object 0xF1 carries a 4-component firmware version, byte-reversed."""
     # adv_info + F1 00 01 02 04  → sw_version "4.2.1.0"
     data_string = b"\x40\xf1\x00\x01\x02\x04"
@@ -4839,7 +4839,7 @@ def test_bthome_firmware_version_4_bytes():
     assert result.devices[None].sw_version == "4.2.1.0"
 
 
-def test_bthome_firmware_version_3_bytes():
+def test_bthome_firmware_version_3_bytes() -> None:
     """Object 0xF2 carries a 3-component firmware version, byte-reversed."""
     # adv_info + F2 00 01 06  → sw_version "6.1.0"
     data_string = b"\x40\xf2\x00\x01\x06"
@@ -4853,7 +4853,7 @@ def test_bthome_firmware_version_3_bytes():
     assert result.devices[None].sw_version == "6.1.0"
 
 
-def test_bthome_firmware_version_4_overrides_default_sw_version():
+def test_bthome_firmware_version_4_overrides_default_sw_version() -> None:
     """F1 should override the default 'BTHome BLE v2' sw_version."""
     # Temperature 0x02 + F1 firmware version
     data_string = b"\x40\x02\xca\x09\xf1\x00\x01\x02\x04"
@@ -4868,7 +4868,7 @@ def test_bthome_firmware_version_4_overrides_default_sw_version():
     assert result.entity_values[KEY_TEMPERATURE].native_value == 25.06
 
 
-def test_bthome_device_info_combined():
+def test_bthome_device_info_combined() -> None:
     """F0 + F1 in the same advertisement must both be consumed without errors."""
     # adv_info + F0 0100 + F1 00 01 02 04
     data_string = b"\x40\xf0\x01\x00\xf1\x00\x01\x02\x04"
@@ -4883,7 +4883,7 @@ def test_bthome_device_info_combined():
     assert result.devices[None].sw_version == "4.2.1.0"
 
 
-def test_bthome_firmware_version_3_overrides_default_sw_version_encrypted():
+def test_bthome_firmware_version_3_overrides_default_sw_version_encrypted() -> None:
     """F2 takes precedence over the 'BTHome BLE v2 (encrypted)' default too."""
     device = BTHomeBluetoothDeviceData()
     device.set_title("test")
