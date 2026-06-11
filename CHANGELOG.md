@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.23.4 (2026-06-11)
+
+### Bug fixes
+
+
+- Re-release due to sigstore flake ([`56c6c5d`](https://github.com/Bluetooth-Devices/bthome-ble/commit/56c6c5dd9d3bcb0a349c4f634f8c77d27b4cd612))
+
+
 ## v3.23.3 (2026-06-11)
 
 ### Bug fixes
