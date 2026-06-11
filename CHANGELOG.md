@@ -1,5 +1,31 @@
 # Changelog
 
+## v3.23.3 (2026-06-11)
+
+### Bug fixes
+
+
+- Revert encryption counter check ([`de550a8`](https://github.com/Bluetooth-Devices/bthome-ble/commit/de550a8240ba4a4b9d4905ff529780bd3da2ab5b))
+
+
+### Chores
+
+
+- Bump actions/cache from 4 to 5 in the github-actions group ([`617461a`](https://github.com/Bluetooth-Devices/bthome-ble/commit/617461a5bd66be05383e164d97b36789844b1842))
+
+
+- Pre-commit autoupdate ([`55e6f11`](https://github.com/Bluetooth-Devices/bthome-ble/commit/55e6f112c07e4a47005cbbe64d76e3fdd1321577))
+
+
+- Bump myst-parser from 5.0.0 to 5.1.0 ([`3dd11dc`](https://github.com/Bluetooth-Devices/bthome-ble/commit/3dd11dc1cde43ee868af790be25c41e21787a003))
+
+
+- Bump pytest-cov from 7.0.0 to 7.1.0 ([`32d9674`](https://github.com/Bluetooth-Devices/bthome-ble/commit/32d9674d4307186a9007ceb6092826220d8d05b6))
+
+
+- Pre-commit autoupdate ([`3af2842`](https://github.com/Bluetooth-Devices/bthome-ble/commit/3af28427457b2e4e8732a9986b75e4b49fdec7b0))
+
+
 ## v3.23.2 (2026-05-20)
 
 ### Bug fixes
